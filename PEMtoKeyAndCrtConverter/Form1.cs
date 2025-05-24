@@ -33,7 +33,7 @@ namespace PEMtoKeyAndCrtConverter
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                openFileDialog.Filter = "PEM files (*.pem)|*.pem|All files (*.*)|*.*";
+                openFileDialog.Filter = "Private Key Files (*.pem)|*.pem|All files (*.*)|*.*";
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     txtPrivKeyPath.Text = openFileDialog.FileName;
@@ -45,7 +45,7 @@ namespace PEMtoKeyAndCrtConverter
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                openFileDialog.Filter = "PEM files (*.pem)|*.pem|All files (*.*)|*.*";
+                openFileDialog.Filter = "Full Chain Files (*.pem)|*.pem|All files (*.*)|*.*";
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     txtFullChainPath.Text = openFileDialog.FileName;
@@ -57,7 +57,7 @@ namespace PEMtoKeyAndCrtConverter
         {
             using (SaveFileDialog saveFileDialog = new SaveFileDialog())
             {
-                saveFileDialog.Filter = "Key files (*.key)|*.key|All files (*.*)|*.*";
+                saveFileDialog.Filter = "Key Files (*.key) , (*.pem)|*.key;*.pem|All Files (*.*)|*.*";
                 saveFileDialog.FileName = "private.key"; // Default filename
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
@@ -70,7 +70,7 @@ namespace PEMtoKeyAndCrtConverter
         {
             using (SaveFileDialog saveFileDialog = new SaveFileDialog())
             {
-                saveFileDialog.Filter = "Certificate files (*.crt)|*.crt|All files (*.*)|*.*";
+                saveFileDialog.Filter = "Certificate Files (*.crt) , (*.pem)|*.crt;*.pem|All Files (*.*)|*.*";
                 saveFileDialog.FileName = "certificate.crt"; // Default filename
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
