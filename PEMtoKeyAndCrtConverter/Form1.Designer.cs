@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             txtPrivKeyPath = new TextBox();
             txtFullChainPath = new TextBox();
             btnBrowsePrivKey = new Button();
@@ -226,6 +227,7 @@
             Controls.Add(btnBrowsePrivKey);
             Controls.Add(txtFullChainPath);
             Controls.Add(txtPrivKeyPath);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             Text = "Pem To Key & Crt";
             Load += Form1_Load;
